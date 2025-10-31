@@ -1,0 +1,12 @@
+//to compile files 
+
+C:\Users\DELL\OneDrive\سطح المكتب\StudentManagement\client>java -cp ".;../lib/mysql-connector-java-8.0.33.jar;services;views;controllers;models" Main
+
+
+
+//to run all files
+C:\Users\DELL\OneDrive\سطح المكتب\StudentManagement\client>javac -cp ".;../lib/mysql-connector-java-8.0.33.jar" ClientService.java views/*.java controllers/*.java models/*.java Main.java
+
+
+
+

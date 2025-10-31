@@ -1,0 +1,36 @@
+StudentManagement/
+├── server/
+│   ├── Server.java
+│   └── pom.xml
+├── client/
+│   ├── Main.java
+│   ├── controllers/
+│   │   ├── LoginController.java
+│   │   ├── StudentController.java
+│   │   ├── TeacherController.java
+│   │   ├── AdminController.java
+│   │   └── ResponsableController.java
+│   ├── views/
+│   │   ├── LoginView.java
+│   │   ├── StudentView.java
+│   │   ├── TeacherView.java
+│   │   ├── AdminView.java
+│   │   └── ResponsableView.java
+│   ├── models/
+│   │   ├── User.java
+│   │   ├── Student.java
+│   │   ├── Grade.java
+│   │   ├── Program.java
+│   │   ├── Exam.java
+│   │   └── Registration.java
+│   ├── services/
+│   │   └── ClientService.java
+│   └── pom.xml
+├── lib/
+│   └── mysql-connector-java-8.0.33.jar
+├── database/
+│   └── creation.sql
+└── scripts/
+    ├── run-server.bat
+    ├── run-client.bat
+    └── compile-all.bat

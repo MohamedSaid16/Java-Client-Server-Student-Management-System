@@ -1,45 +1,59 @@
-# Java-Client-Server-Student-Management-System
-A comprehensive, multi-role Student Management System built with Java Swing for the client interface and Java Socket programming for client-server communication. This system provides a complete academic management solution with role-based access control.
-# 🎓 Student Management System
+# 🎓 Java Client-Server Student Management System
 
-A Java-based client-server application for managing academic information, built with Socket Programming and MySQL.
-It supports multiple user roles with distinct permissions and provides a modular architecture for scalability and maintenance.
+A comprehensive, multi-role **Student Management System** built with **Java Swing** for the client interface and **Java Socket Programming** for client-server communication.  
+This system provides a complete academic management solution with **role-based access control** and **modular architecture** for scalability and maintenance.
 
-# 🚀 Features
-## 🧩 Multi-User Role System
+---
 
-Admin — Full system administration
-Student — View grades and academic programs
-Teacher — Manage student grades and exams
-Responsable — Handle administrative functions and reporting
+## 🚀 Features
 
-# ⚙️ Core Functionalities
+### 🧩 Multi-User Role System
+- **Admin** — Full system administration  
+- **Student** — View grades and academic programs  
+- **Teacher** — Manage student grades and exams  
+- **Responsable** — Handle administrative functions and reporting  
 
-Secure user authentication & authorization
-Student grade management
-Program & course management
-Exam scheduling and tracking
-User registration system
+---
 
-# 🛠️ Technologies Used
-Backend: Java (Socket Programming)
-Database: MySQL
-Build Tool: Maven
-Architecture: Client–Server Model
+### ⚙️ Core Functionalities
+- Secure user authentication & authorization  
+- Student grade management  
+- Program & course management  
+- Exam scheduling and tracking  
+- User registration system  
 
-# 📦 Installation & Setup
-## 🔑 Prerequisites
-Make sure you have the following installed:
-Java JDK 8 or higher
-MySQL Server
-Maven
+---
 
-# 🗄️ Database Setup
-Create a new database in MySQL.
-Run the SQL script located at:
-database/creation.sql
+## 🛠️ Technologies Used
+- **Backend:** Java (Socket Programming)  
+- **Database:** MySQL  
+- **Build Tool:** Maven  
+- **Architecture:** Client–Server Model  
 
-# 🧩 Project Structure
+---
+
+## 📦 Installation & Setup
+
+### 🔑 Prerequisites
+Make sure you have the following installed:  
+- **Java JDK 8** or higher  
+- **MySQL Server**  
+- **Maven**
+
+---
+
+### 🗄️ Database Setup
+1. Create a new database in MySQL  
+2. Run the SQL script located at:  
+   ```bash
+   database/creation.sql
+   ```
+
+---
+
+## 🧩 Project Structure
+
+```
 StudentManagement/
 ├── server/
 │   ├── Server.java
@@ -76,18 +90,83 @@ StudentManagement/
     ├── run-server.bat
     ├── run-client.bat
     └── compile-all.bat
-# ▶️ How to Run
-## server:
-1-compile:
-javac -cp ".;../lib/mysql-connector-java-8.0.33.jar" *.java
-2-run:
-java -cp ".;../lib/mysql-connector-java-8.0.33.jar" Server
-3-clean calsses:
-del *.class /s
-## client:
-1-compile:
-javac -cp ".;../lib/mysql-connector-java-8.0.33.jar" ClientService.java views/*.java controllers/*.java models/*.java Main.java
-2-run:
-java -cp ".;../lib/mysql-connector-java-8.0.33.jar;services;views;controllers;models" Main
-3-clean calsses:
-del *.class /s
+```
+
+---
+
+## ▶️ How to Run
+
+### Server:
+1. **Compile**:  
+   ```bash
+   javac -cp ".;../lib/mysql-connector-java-8.0.33.jar" *.java
+   ```
+2. **Run**:  
+   ```bash
+   java -cp ".;../lib/mysql-connector-java-8.0.33.jar" Server
+   ```
+3. **Clean classes**:  
+   ```bash
+   del *.class /s
+   ```
+
+### Client:
+1. **Compile**:  
+   ```bash
+   javac -cp ".;../lib/mysql-connector-java-8.0.33.jar" ClientService.java views/*.java controllers/*.java models/*.java Main.java
+   ```
+2. **Run**:  
+   ```bash
+   java -cp ".;../lib/mysql-connector-java-8.0.33.jar;services;views;controllers;models" Main
+   ```
+3. **Clean classes**:  
+   ```bash
+   del *.class
+   ```
+
+---
+
+## 👥 User Roles & Access
+
+| Role       | Permissions                                    |
+|------------|------------------------------------------------|
+| **Admin**   | Full system access, manage users               |
+| **Student** | View grades, programs, and personal info       |
+| **Teacher** | Manage grades, create exams, view student info |
+| **Responsable** | Administrative tasks and reporting        |
+
+---
+
+## 📋 Model Classes
+
+| Class         | Description                                          |
+|---------------|------------------------------------------------------|
+| **User**       | Base user class with authentication attributes      |
+| **Student**    | Extends User; includes student-specific data        |
+| **Grade**      | Handles student grades and evaluations               |
+| **Program**    | Manages academic programs and courses                |
+| **Exam**       | Defines exam scheduling and result tracking          |
+| **Registration**| Manages student course registration                  |
+
+---
+
+## 🧰 Configuration
+
+1. Update database connection settings in:  
+   - `server/Server.java`  
+   - `client/services/ClientService.java`  
+2. Ensure the MySQL connector JAR is located at:  
+   ```
+   lib/mysql-connector-java-8.0.33.jar
+   ```
+3. Modify port settings in `Server.java` and `ClientService.java` if needed.
+
+---
+
+## 📞 Support
+
+If you encounter issues or questions:  
+- Double‐check the database connection, port settings, and paths.  
+- Confirm dependencies are properly configured.  
+- Review the script files in the `scripts/` directory for execution order.
+
